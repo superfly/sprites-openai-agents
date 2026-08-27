@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sprites-openai-agents"
+version = "0.2.0"
+description = "Sprites sandbox provider for the OpenAI Agents SDK"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = [
+    "sprites",
+    "openai",
+    "agents",
+    "sandbox",
+    "remote-execution",
+]
+authors = [
+    {name = "Sprites Team"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Typing :: Typed",
+]
+dependencies = [
+    "openai-agents>=0.18.2,<0.23",
+    "sprites-py>=0.3,<0.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "mypy>=1.0",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.11",
+    "twine>=6.0",
+]
+
+[project.urls]
+Homepage = "https://sprites.dev"
+Documentation = "https://github.com/superfly/sprites-openai-agents#readme"
+Repository = "https://github.com/superfly/sprites-openai-agents"
+Issues = "https://github.com/superfly/sprites-openai-agents/issues"
+Changelog = "https://github.com/superfly/sprites-openai-agents/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sprites_openai_agents = ["py.typed"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["sprites_openai_agents"]
+known-third-party = ["agents", "sprites"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+packages = ["sprites_openai_agents"]
