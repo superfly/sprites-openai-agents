@@ -32,7 +32,7 @@ classifiers = [
 ]
 dependencies = [
     "openai-agents>=0.18.2,<0.23",
-    "sprites-py>=0.3,<0.6",
+    "sprites-py>=0.3,<0.7",
 ]
 
 [project.optional-dependencies]
