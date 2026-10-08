@@ -31,7 +31,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "openai-agents>=0.18.2,<0.23",
+    "openai-agents>=0.18.2,<0.24",
     "sprites-py>=0.3,<0.8",
 ]
 
