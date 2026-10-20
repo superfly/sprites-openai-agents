@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## 0.2.1 - 2026-10-20
+
+- Expand the supported `sprites-py` range to `>=0.3,<0.8`, allowing
+  applications to use the 0.6.x and 0.7.x SDK releases.
+
 ## 0.2.0 - 2026-08-27
 
 - Move development and releases from the `superfly/sprites-py` monorepo to
