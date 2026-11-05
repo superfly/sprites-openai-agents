@@ -27,10 +27,10 @@ export SPRITES_API_TOKEN=...
 ```python
 from agents.run import RunConfig
 from agents.sandbox import SandboxAgent, SandboxRunConfig
-from sprites_openai_agents import SpritesSandboxClient
+from sprites_openai_agents import SpritesSandboxClient, SpritesSandboxClientOptions
 
 client = SpritesSandboxClient()
-sandbox = await client.create()
+sandbox = await client.create(options=SpritesSandboxClientOptions())
 
 agent = SandboxAgent(
     name="Sprite assistant",

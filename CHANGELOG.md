@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## 0.2.2 (unreleased)
+
+- Include `openai-agents>=0.18.2,<0.25` support in the next published package.
+- Fix the quickstart to pass the required sandbox client options.
+
 ## 0.2.1 - 2026-10-20
 
 - Expand the supported `sprites-py` range to `>=0.3,<0.8`, allowing
